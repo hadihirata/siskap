@@ -14,8 +14,9 @@ class WorksController extends Controller
      */
     public function index()
     {
-        $title="Aplikasi Rekap Pekerjaan";
-        return view('work.index',compact('title'));
+        $title="Aplikasi Rekap Pekerjaan - Daftar Pekerjaan";
+        $work=works::all();
+        return view('work.index',compact('title','work'));
     }
 
     /**
