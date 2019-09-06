@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWorksTable extends Migration
+class CreateDetailworksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateWorksTable extends Migration
      */
     public function up()
     {
-        Schema::create('works', function (Blueprint $table) {
+        Schema::create('detailworks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama');
-            $table->string('sumber');
+            $table->integer('id_pekerjaan');     
             $table->date('tgl');
-            $table->string('jenis_pekerjaan');
-            $table->string('programer');
+            $table->string('status_pegerjaan');
+            $table->integer('persentase_pengerjaan');
             $table->longText('keterangan');
             $table->timestamps();
         });
@@ -32,6 +31,6 @@ class CreateWorksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('works');
+        Schema::dropIfExists('detailworks');
     }
 }
