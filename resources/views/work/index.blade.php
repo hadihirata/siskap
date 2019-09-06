@@ -7,10 +7,9 @@
     <div class="row">
       <div class="col-md-12">
         <h3>{{ $title }}</h3>
-
-        <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add</button>
-		<button type="button" class="btn btn-secondary btn-sm"><i class="fa fa-copy"></i> Print</button>
-
+        <a href="/work/create"  class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add</a>
+        <a href=""  class="btn btn-secondary btn-sm"><i class="fa fa-copy"></i> Print</a>
+        
         <table class="table mt-3">
             <thead class="thead-dark">
               <tr>
@@ -29,6 +28,7 @@
                 <td>{{ $w->sumber }}</td>
                 <td>{{ $w->tgl }}</td>
                 <td>
+                  <a href="/work/{{ $w->id}}" class="badge badge-primary"><i class="fa fa-search"></i> Show</a>
                 	<a href="/work/{{ $w->id}}" class="badge badge-success"><i class="fa fa-pencil"></i> Edit</a>
                 	<a href="" class="badge badge-danger"><i class="fa fa-trash"></i> Delete</a>
                 </td>

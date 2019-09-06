@@ -26,7 +26,8 @@ class WorksController extends Controller
      */
     public function create()
     {
-        //
+        $title="Aplikasi Rekap Pekerjaan - Daftar Pekerjaan (-add-)";       
+        return view('work.create',compact('title','work'));
     }
 
     /**
@@ -48,7 +49,8 @@ class WorksController extends Controller
      */
     public function show(work $work)
     {
-        return $work;
+        $title="Aplikasi Rekap Pekerjaan - Daftar Pekerjaan (-show-)";       
+        return view('work.show',compact('title','work'));
     }
 
     /**

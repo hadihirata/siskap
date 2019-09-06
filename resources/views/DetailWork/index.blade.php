@@ -17,9 +17,11 @@
 		     	
 		      
 		    </div>
-		    <p class="mb-1">Keterangan <b>{{ $w->keterangan }}</b></p>
+		   
 		     <small>Sumber <b>{{ $w->sumber }}</b></small> <br>
 		     <small>Tangal <b>{{ $w->tgl }}</b></small>
+		     <hr>
+		      <p class="mb-1">Deskripsi : {{ $w->keterangan }}</p>
 		  </a>
 		   @endforeach
 		</div>

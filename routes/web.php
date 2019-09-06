@@ -16,8 +16,12 @@
 });*/
 route::get('/','HomeController@index');
 route::get('/about','HomeController@about');
+
 route::get('/work','WorksController@index');
+route::get('/work/create','WorksController@create');
 route::get('/work/{work}','WorksController@show');
+
+
 route::get('/detail','DetailWorksController@index');
 route::get('/detail/{DetailWork}','DetailWorksController@showto');
 
