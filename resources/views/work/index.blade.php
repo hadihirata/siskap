@@ -29,7 +29,7 @@
                 <td>{{ $w->sumber }}</td>
                 <td>{{ $w->tgl }}</td>
                 <td>
-                	<a href="" class="badge badge-success"><i class="fa fa-pencil"></i> Edit</a>
+                	<a href="/work/{{ $w->id}}" class="badge badge-success"><i class="fa fa-pencil"></i> Edit</a>
                 	<a href="" class="badge badge-danger"><i class="fa fa-trash"></i> Delete</a>
                 </td>
               </tr>

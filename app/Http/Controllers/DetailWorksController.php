@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\DetailWord;
-use App\Works;
+use App\Work;
 use Illuminate\Http\Request;
 
 class DetailWorksController extends Controller
@@ -16,7 +16,7 @@ class DetailWorksController extends Controller
     public function index()
     {
         $title="Aplikasi Rekap Pekerjaan - Daftar Detail Pekerjaan";
-        $work=works::all();
+        $work=work::all();
         return view('DetailWork.index',compact('title','work'));
     }
 
@@ -49,7 +49,17 @@ class DetailWorksController extends Controller
      */
     public function show(DetailWord $detailWord)
     {
-        //
+        return $detailWord;
+    }
+
+    public function showto($id)
+    {
+        //$work = work::find($id);
+        
+        $title="Aplikasi Rekap Pekerjaan - Daftar Detail Pekerjaan (detail list)";
+        $detailshow=work::find($id);
+        return view('DetailWork.detail',compact('title','detailshow'));
+        return $detailshow->nama;
     }
 
     /**

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Works;
+use App\work;
 use Illuminate\Http\Request;
 
 class WorksController extends Controller
@@ -15,7 +15,7 @@ class WorksController extends Controller
     public function index()
     {
         $title="Aplikasi Rekap Pekerjaan - Daftar Pekerjaan";
-        $work=works::all();
+        $work=work::all();
         return view('work.index',compact('title','work'));
     }
 
@@ -43,21 +43,21 @@ class WorksController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Works  $works
+     * @param  \App\work  $work
      * @return \Illuminate\Http\Response
      */
-    public function show(Works $works)
+    public function show(work $work)
     {
-        //
+        return $work;
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Works  $works
+     * @param  \App\work  $work
      * @return \Illuminate\Http\Response
      */
-    public function edit(Works $works)
+    public function edit(work $work)
     {
         //
     }
@@ -66,10 +66,10 @@ class WorksController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Works  $works
+     * @param  \App\work  $work
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Works $works)
+    public function update(Request $request, work $work)
     {
         //
     }
@@ -77,10 +77,10 @@ class WorksController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Works  $works
+     * @param  \App\work  $work
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Works $works)
+    public function destroy(work $work)
     {
         //
     }
