@@ -6,33 +6,22 @@
 @section('content')
     <div class="row">
       <div class="col-md-12">
-        <h3>Detail Pekerjaan</h3>
+        <h3>{{ $title }}</h3>
 
         <div class="list-group mt-3">
-		  <a href="#" class="list-group-item list-group-item-action">
+          @foreach ($work as $w )
+		  <a href="/" class="list-group-item list-group-item-action">
 		    <div class="d-flex w-100 justify-content-between">
-		      <h5 class="mb-1">List group item heading</h5>
-		      <small>3 days ago</small>
+		      <h5 class="mb-1">Nama Pekerjaan <b>{{ $w->nama }}</b></h5>
+		      	<small> Detail</small>
+		     	
+		      
 		    </div>
-		    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-		    <small>Donec id elit non mi porta.</small>
+		    <p class="mb-1">Keterangan <b>{{ $w->keterangan }}</b></p>
+		     <small>Sumber <b>{{ $w->sumber }}</b></small> <br>
+		     <small>Tangal <b>{{ $w->tgl }}</b></small>
 		  </a>
-		  <a href="#" class="list-group-item list-group-item-action">
-		    <div class="d-flex w-100 justify-content-between">
-		      <h5 class="mb-1">List group item heading</h5>
-		      <small class="text-muted">3 days ago</small>
-		    </div>
-		    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-		    <small class="text-muted">Donec id elit non mi porta.</small>
-		  </a>
-		  <a href="#" class="list-group-item list-group-item-action">
-		    <div class="d-flex w-100 justify-content-between">
-		      <h5 class="mb-1">List group item heading</h5>
-		      <small class="text-muted">3 days ago</small>
-		    </div>
-		    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-		    <small class="text-muted">Donec id elit non mi porta.</small>
-		  </a>
+		   @endforeach
 		</div>
 
       </div>
