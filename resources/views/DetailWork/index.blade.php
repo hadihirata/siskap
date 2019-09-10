@@ -9,6 +9,13 @@
         <h3>{{ $title }}</h3>
 
         <div class="list-group mt-3">
+
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
+        
           @foreach ($work as $w )
 		  <a href="/detail/{{ $w->id}}" class="list-group-item list-group-item-action">
 		    <div class="d-flex w-100 justify-content-between">

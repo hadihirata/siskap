@@ -17,11 +17,14 @@
 route::get('/','HomeController@index');
 route::get('/about','HomeController@about');
 
+route::get('/detail','DetailWorksController@index');
+route::get('/detail/{DetailWork}','DetailWorksController@showto');
+
 route::get('/work','WorksController@index');
 route::get('/work/create','WorksController@create');
 route::get('/work/{work}','WorksController@show');
+route::post('/work','WorksController@store');
 
 
-route::get('/detail','DetailWorksController@index');
-route::get('/detail/{DetailWork}','DetailWorksController@showto');
+
 

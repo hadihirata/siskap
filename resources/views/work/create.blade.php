@@ -8,7 +8,10 @@
       <div class="col-md-12">
         <h3>{{ $title }}</h3>
 
+
         <form action="/work" method="post" >
+
+         {{ csrf_field() }}
           <div class="form-group row">
             <label for="staticEmail" class="col-sm-2 col-form-label">Nama</label>
             <div class="col-sm-10">

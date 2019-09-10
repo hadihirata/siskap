@@ -38,7 +38,34 @@ class WorksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //cara ci -sqlbuider
+       /* $work = new work;
+        $work->nama=$request->nama;
+        $work->tgl=$request->tgl;
+        $work->sumber=$request->sumber;
+        $work->jenis_pekerjaan=$request->jenis_pekerjaan;
+        $work->programer=$request->programer;
+        $work->keterangan=$request->keterangan;
+        $work->save();*/
+
+        //cara laravel 1
+
+        /*work::create([
+            'nama'=>$request->nama,
+            'tgl'=>$request->tgl,
+            'sumber'=>$request->sumber,
+            'jenis_pekerjaan'=>$request->jenis_pekerjaan,
+            'programer'=>$request->programer,
+            'keterangan'=>$request->keterangan
+        ]);*/
+
+        work::create($request->all());
+
+
+
+
+        return redirect('/work')->with('status', 'Work insert!');
+
     }
 
     /**
