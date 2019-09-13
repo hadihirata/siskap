@@ -11,8 +11,8 @@
         <a href=""  class="btn btn-secondary btn-sm"><i class="fa fa-copy"></i> Print</a>
         
         @if (session('status'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-              <strong>{{ session('status') }}</strong> <br>You should check in on some of those fields below.
+            <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+              <strong>{{ session('status') }}</strong> <br> List Work 
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
