@@ -7,6 +7,7 @@
     <div class="row">
       <div class="col-md-12">
         <h3>{{ $title }}</h3>
+        <hr>
 
         <div class="list-group mt-3">
 
@@ -25,7 +26,7 @@
            ?>
 		  <a href="/detail/{{ $w->id}}" class="list-group-item list-group-item-action <?php echo $class ?>">
 		    <div class="d-flex w-100 justify-content-between">
-		      <h5 class="mb-1"><b style="color:red;">({{ $loop->iteration }}) </b> Nama Pekerjaan <b>{{ $w->nama }}</b></h5>
+		      <h5 class="mb-1"><b>({{ $loop->iteration }}) </b> Nama Pekerjaan <b>{{ $w->nama }}</b></h5>
 		      	<small> Detail</small>
 		     	
 		      

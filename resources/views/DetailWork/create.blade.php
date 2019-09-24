@@ -9,7 +9,7 @@
         <h3>{{ $title }}</h3>
 
 
-        <form action="/work" method="post" >
+        <form action="/detail" method="post" >
 
          {{ csrf_field() }}
          <input type="hidden" name="id_pekerjaan" value="{{ $work->id }}">

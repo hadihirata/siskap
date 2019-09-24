@@ -41,7 +41,7 @@ class DetailWorksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo "string";
     }
 
     /**

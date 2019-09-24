@@ -20,6 +20,7 @@ route::get('/about','HomeController@about');
 route::get('/detail','DetailWorksController@index');
 route::get('/detail/{DetailWork}','DetailWorksController@showto');
 route::get('/detail/{DetailWork}/create','DetailWorksController@create');
+route::post('/detail','DetailWorksController@store');
 
 route::get('/work','WorksController@index');
 route::get('/work/create','WorksController@create');
@@ -31,3 +32,7 @@ route::get('/work/{work}/edit','WorksController@edit');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
