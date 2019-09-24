@@ -39,8 +39,14 @@
                 <td>{{ $w->tgl }}</td>
                 <td>
                   <a href="/work/{{ $w->id}}" class="badge badge-primary"><i class="fa fa-search"></i> Show</a>
-                	<a href="/work/{{ $w->id}}" class="badge badge-success"><i class="fa fa-pencil"></i> Edit</a>
-                	<a href="" class="badge badge-danger"><i class="fa fa-trash"></i> Delete</a>
+
+                	<a href="/work/{{ $w->id}}/edit" class="badge badge-success"><i class="fa fa-pencil"></i> Edit</a>
+                	<!--<a href="" class="badge badge-danger"><i class="fa fa-trash"></i> Delete</a>-->
+                  <form action="/work/{{ $w->id}}" method="post">
+                   {{ csrf_field() }}
+                    <input type="hidden" name="_method" value="DELETE">
+                  <button type="submit" class="badge badge-danger"><i class="fa fa-trash"></i> Delete</button>
+                  </form>
                 </td>
               </tr>
               @endforeach

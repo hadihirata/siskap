@@ -15,7 +15,7 @@
           <div class="form-group row">
             <label for="staticEmail" class="col-sm-2 col-form-label">Nama</label>
             <div class="col-sm-10">
-              <input type="text" name="nama" class="form-control {{ $errors->has('nama') ? 'is-invalid':'' }}" placeholder="Masukkan Nama/Judul Pekerjaan/Aplikasi" value="{{ old('nama') }}">
+              <input type="text" name="nama" class="form-control {{ $errors->has('nama') ? 'is-invalid':'' }}" placeholder="Masukkan Nama/Judul Pekerjaan/Aplikasi" value="{{ $work->nama }}">
               <p class="text-danger">{{ $errors->first('nama') }}</p>
             </div>
           </div>
@@ -87,7 +87,7 @@
           <div class="form-group row">
            
             <div class="col-sm-12">
-              <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i>  Save</button>
+              <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i>  Update</button>
               <button type="cancel" class="btn btn-danger"><i class="fa fa-remove"></i>  Cancel</button>
             </div>
           </div>

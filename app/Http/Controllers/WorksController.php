@@ -58,12 +58,15 @@ class WorksController extends Controller
             'programer'=>$request->programer,
             'keterangan'=>$request->keterangan
         ]);*/
-
+        
+         $this->validate($request, [
+            'nama'=>'required',           
+            'sumber'=>'required',
+            'jenis_pekerjaan'=>'required',
+            'programer'=>'required',
+            'keterangan'=>'required'
+        ]);
         work::create($request->all());
-
-
-
-
         return redirect('/work')->with('status', 'Work insert!');
 
     }
@@ -88,7 +91,8 @@ class WorksController extends Controller
      */
     public function edit(work $work)
     {
-        //
+         $title="Aplikasi Rekap Pekerjaan - Daftar Pekerjaan (-edit-)";       
+        return view('work.edit',compact('title','work'));
     }
 
     /**
@@ -111,6 +115,8 @@ class WorksController extends Controller
      */
     public function destroy(work $work)
     {
-        //
+        $work::destroy($work->id);
+        return redirect('/work')->with('status', 'Work Delete!');
+
     }
 }

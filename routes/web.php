@@ -24,6 +24,8 @@ route::get('/work','WorksController@index');
 route::get('/work/create','WorksController@create');
 route::get('/work/{work}','WorksController@show');
 route::post('/work','WorksController@store');
+route::delete('/work/{work}','WorksController@destroy');
+route::get('/work/{work}/edit','WorksController@edit');
 
 
 
