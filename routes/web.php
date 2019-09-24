@@ -19,6 +19,7 @@ route::get('/about','HomeController@about');
 
 route::get('/detail','DetailWorksController@index');
 route::get('/detail/{DetailWork}','DetailWorksController@showto');
+route::get('/detail/{DetailWork}/create','DetailWorksController@create');
 
 route::get('/work','WorksController@index');
 route::get('/work/create','WorksController@create');

@@ -17,9 +17,15 @@
         @endif
         
           @foreach ($work as $w )
-		  <a href="/detail/{{ $w->id}}" class="list-group-item list-group-item-action">
+          <?php 
+          		 if( $loop->iteration % 2 == 0)
+	                $class="";
+	            else
+	                 $class="warna";
+           ?>
+		  <a href="/detail/{{ $w->id}}" class="list-group-item list-group-item-action <?php echo $class ?>">
 		    <div class="d-flex w-100 justify-content-between">
-		      <h5 class="mb-1">Nama Pekerjaan <b>{{ $w->nama }}</b></h5>
+		      <h5 class="mb-1"><b style="color:red;">({{ $loop->iteration }}) </b> Nama Pekerjaan <b>{{ $w->nama }}</b></h5>
 		      	<small> Detail</small>
 		     	
 		      

@@ -15,7 +15,7 @@ class DetailWorksController extends Controller
      */
     public function index()
     {
-        $title="Aplikasi Rekap Pekerjaan - Daftar Detail Pekerjaan";
+        $title="Aplikasi Rekap Pekerjaan - Daftar Detail Pekerjaan (-list-)";
         $work=work::all();
         return view('DetailWork.index',compact('title','work'));
     }
@@ -25,9 +25,12 @@ class DetailWorksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $title="Aplikasi Rekap Pekerjaan - Daftar detail Pekerjaan (-add detail-)";
+        $work=work::find($id);       
+        return view('DetailWork.create',compact('title','work'));
+        //return $detailshow;
     }
 
     /**
@@ -56,7 +59,7 @@ class DetailWorksController extends Controller
     {
         //$work = work::find($id);
         
-        $title="Aplikasi Rekap Pekerjaan - Daftar Detail Pekerjaan (detail list)";
+        $title="Aplikasi Rekap Pekerjaan - Daftar Detail Pekerjaan (-detail list-)";
         $detailshow=work::find($id);
         return view('DetailWork.detail',compact('title','detailshow'));
         return $detailshow->nama;

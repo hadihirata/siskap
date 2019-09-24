@@ -89,6 +89,7 @@
             <div class="col-sm-12">
               <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i>  Save</button>
               <button type="cancel" class="btn btn-danger"><i class="fa fa-remove"></i>  Cancel</button>
+              <a href="{{ url('/work') }}" >Back List</a>
             </div>
           </div>
         </form>

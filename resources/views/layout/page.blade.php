@@ -10,6 +10,11 @@
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  />
 
     <title>@yield('title')</title>
+    <style type="text/css">
+      .warna{
+        background: rgba(0, 123, 255, 0.06);
+      }
+    </style>
   </head>
   <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
