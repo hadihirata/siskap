@@ -15,7 +15,8 @@ class CreateDetailworksTable extends Migration
     {
         Schema::create('detailworks', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_pekerjaan');     
+            $table->integer('id_pekerjaan');
+            $table->string('username')->unique();     
             $table->date('tgl');
             $table->string('status_pegerjaan');
             $table->integer('persentase_pengerjaan');
