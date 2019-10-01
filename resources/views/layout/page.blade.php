@@ -28,11 +28,14 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-item nav-link" href="{{ url('/work') }}">List</a>
+            <li class="nav-item">
+              <a class="nav-item nav-link" href="{{ url('/work') }}">ListWork</a>
             </li>
             <li class="nav-item">
-               <a class="nav-item nav-link" href="{{ url('/detail') }}">Detail</a>
+               <a class="nav-item nav-link" href="{{ url('/detail') }}">DetailWork</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-item nav-link" href="{{ url('/domain') }}">ListDomain</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -66,7 +69,7 @@
                   Setting
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Manage User</a>                          
+                  <a class="dropdown-item" href="{{ url('/user') }}">Manage User</a>                          
                   
 
                  

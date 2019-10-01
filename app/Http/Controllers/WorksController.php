@@ -14,7 +14,7 @@ class WorksController extends Controller
      */
     public function index()
     {
-        $title="Aplikasi Rekap Pekerjaan - Daftar Pekerjaan";
+        $title="ARP - Daftar Pekerjaan (-list-)";
         $work=work::all();
         return view('work.index',compact('title','work'));
     }
@@ -26,7 +26,7 @@ class WorksController extends Controller
      */
     public function create()
     {
-        $title="Aplikasi Rekap Pekerjaan - Daftar Pekerjaan (-add-)";       
+        $title="ARP - Daftar Pekerjaan (-add-)";       
         return view('work.create',compact('title','work'));
     }
 
@@ -79,7 +79,7 @@ class WorksController extends Controller
      */
     public function show(work $work)
     {
-        $title="Aplikasi Rekap Pekerjaan - Daftar Pekerjaan (-show-)";       
+        $title="ARP - Daftar Pekerjaan (-show-)";       
         return view('work.show',compact('title','work'));
     }
 
@@ -91,7 +91,7 @@ class WorksController extends Controller
      */
     public function edit(work $work)
     {
-         $title="Aplikasi Rekap Pekerjaan - Daftar Pekerjaan (-edit-)";       
+         $title="ARP - Daftar Pekerjaan (-edit-)";       
         return view('work.edit',compact('title','work'));
     }
 

@@ -29,7 +29,11 @@ route::post('/work','WorksController@store');
 route::delete('/work/{work}','WorksController@destroy');
 route::get('/work/{work}/edit','WorksController@edit');
 
-
+route::get('/user','UsersController@index');
+route::get('/user/create','UsersController@create');
+route::post('/user','UsersController@store');
+route::delete('/user/{user}','UsersController@destroy');
+route::get('/user/{user}/edit','UsersController@edit');
 
 
 

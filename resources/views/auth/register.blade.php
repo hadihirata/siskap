@@ -44,6 +44,22 @@
                                 @endif
                             </div>
                         </div>
+                         <div class="form-group{{ $errors->has('level') ? ' has-error' : '' }}">
+                            <label for="name" >Level</label>
+
+                            <div>
+                               <select class="form-control" name="level">
+                                   <option value="" selected="selected">-Pilih Level-</option>
+                                   <option value="user">User</option>
+                               </select>
+
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" >Password</label>
