@@ -14,7 +14,8 @@
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-route::get('/','HomeController@index');
+route::get('/','HomeController@index')->middleware('akses.admin');
+//->middleware('akses.admin');
 route::get('/about','HomeController@about');
 
 route::get('/detail','DetailWorksController@index');

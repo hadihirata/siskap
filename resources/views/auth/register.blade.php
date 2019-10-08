@@ -51,6 +51,7 @@
                                <select class="form-control" name="level">
                                    <option value="" selected="selected">-Pilih Level-</option>
                                    <option value="user">User</option>
+                                   <option value="admin">Admin</option>
                                </select>
 
                                 @if ($errors->has('name'))
