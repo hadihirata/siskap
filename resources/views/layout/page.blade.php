@@ -69,11 +69,12 @@
                   Setting
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  @if(Auth::user()->level == 'admin')
+                  @role('administrator')
                   <a class="dropdown-item" href="{{ url('/user') }}">Manage User</a> 
-                  @else
+                  @endrole   
+                  @role('user')
                    <a class="dropdown-item" href="{{ url('/userprofil') }}">Manage User Profil</a> 
-                  @endif                        
+                  @endrole                       
                   
 
                  
